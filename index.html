@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Modding Community</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Logo Area */
+        .logo-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        .logo-text {
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        .logo-text span {
+            color: #ff0000;
+        }
+
+        .logo-icon {
+            font-size: 14px;
+            color: #ff0000;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .tags {
+            font-size: 12px;
+            color: #ff4d4d;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #b3b3b3;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* Feature Notice */
+        .notice-bar {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .notice-bar i.fa-star {
+            color: #ff4d4d;
+        }
+        
+        .notice-bar i.fa-bolt {
+            color: #ffcc00;
+        }
+
+        /* Links List */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.2s, background 0.2s;
+            text-align: left;
+        }
+
+        .link-card:hover {
+            background: #1c1c1c;
+            transform: translateY(-2px);
+        }
+
+        /* Custom Borders for specific items */
+        .link-crypto { border-color: #00b074; }
+        .link-binance { border-color: #f3ba2f; }
+        .link-payoneer { border-color: #00a3a6; } /* Payoneer Mint/Teal Color */
+        .link-ads { border-color: #a855f7; }
+        .link-mods { border-color: #ef4444; }
+        .link-contact { border-color: #3b82f6; }
+
+        /* Icons styling */
+        .icon-wrapper {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-right: 14px;
+            flex-shrink: 0;
+        }
+
+        .link-crypto .icon-wrapper { background: rgba(0, 176, 116, 0.15); color: #00b074; }
+        .link-binance .icon-wrapper { background: rgba(243, 186, 47, 0.15); color: #f3ba2f; }
+        .link-payoneer .icon-wrapper { background: rgba(0, 163, 166, 0.15); color: #00a3a6; }
+        .link-ads .icon-wrapper { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+        .link-mods .icon-wrapper { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+        .link-contact .icon-wrapper { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+
+        .link-content {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge {
+            font-size: 9px;
+            background: #00b074;
+            color: #fff;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .link-desc {
+            font-size: 11px;
+            color: #8c8c8c;
+            margin-top: 2px;
+        }
+
+        .arrow-right {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Footer Section */
+        .footer-text {
+            font-size: 12px;
+            color: #8c8c8c;
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div>
+                <div class="logo-text">GTA<br><span>Modding</span><br>Community</div>
+                <i class="fa-solid fa-gamepad logo-icon"></i>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <h1>GTA Modding Community</h1>
+        <div class="tags">Mods • Tools • Tutorials • Community</div>
+        <div class="description">
+            We create and share high quality GTA Mods & tools for free.<br>
+            Your support keeps this community alive! ❤️
+        </div>
+
+        <!-- Notice Bar -->
+        <div class="notice-bar">
+            <i class="fa-solid fa-star"></i>
+            <span>Most users support via Binance (Fast & Easy)</span>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+
+        <!-- Links List -->
+        <div class="links-list">
+            <!-- Crypto Support -->
+            <a href="#" class="link-card link-crypto">
+                <div class="icon-wrapper"><i class="fa-solid fa-t"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Support via Crypto (TRC20) <span class="badge">Top</span></div>
+                    <div class="link-desc">USDT TRC20 Accepted</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Binance Pay -->
+            <a href="#" class="link-card link-binance">
+                <div class="icon-wrapper"><i class="fa-solid fa-coins"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Donate via Binance Pay <i class="fa-solid fa-bolt" style="color: #f3ba2f; font-size: 12px;"></i></div>
+                    <div class="link-desc">Instant • Secure • Low Fees</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Payoneer Support -->
+            <a href="#" class="link-card link-payoneer">
+                <div class="icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Payoneer Support 🌐</div>
+                    <div class="link-desc">Send payment via Payoneer Email or ID</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Free Support -->
+            <a href="#" class="link-card link-ads">
+                <div class="icon-wrapper"><i class="fa-solid fa-eye"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Free Support (Watch Ads) 🎉</div>
+                    <div class="link-desc">Support for free by viewing ads</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Download Mods -->
+            <a href="#" class="link-card link-mods">
+                <div class="icon-wrapper"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Download My Mods <i class="fa-solid fa-square-check" style="color: #3b82f6; font-size: 12px;"></i></div>
+                    <div class="link-desc">Direct links to all mods & tools</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Contact Me -->
+            <a href="#" class="link-card link-contact">
+                <div class="icon-wrapper"><i class="fa-solid fa-comment-dots"></i></div>
+                <div class="link-content">
+                    <div class="link-title">Contact Me 💬</div>
+                    <div class="link-desc">Have questions? Let's talk!</div>
+                </div>
+                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-text">Thanks for being part of this community! 🙏</div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
