@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTA Modding Community</title>
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome Essential Link -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
@@ -22,9 +22,9 @@
             color: #ffffff;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
-            padding: 20px;
+            padding: 20px 15px;
         }
 
         .container {
@@ -33,43 +33,10 @@
             background: #0d0d0d;
             border: 1px solid #1a1a1a;
             border-radius: 16px;
-            padding: 30px 20px;
+            padding: 25px 16px;
             text-align: center;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Logo Area */
-        .logo-container {
-            position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 15px;
-            background: #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #ff0000;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-        }
-
-        .logo-text {
-            font-size: 13px;
-            font-weight: 800;
-            text-transform: uppercase;
-            line-height: 1.1;
-            color: #fff;
-        }
-
-        .logo-text span {
-            color: #ff0000;
-        }
-
-        .logo-icon {
-            font-size: 14px;
-            color: #ff0000;
-            margin-top: 4px;
-            display: block;
+            margin: 0 auto;
         }
 
         /* Header Text */
@@ -77,6 +44,7 @@
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 6px;
+            margin-top: 10px;
         }
 
         .tags {
@@ -90,7 +58,7 @@
             font-size: 13px;
             color: #b3b3b3;
             line-height: 1.5;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         /* Feature Notice */
@@ -101,17 +69,12 @@
             font-size: 12px;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             color: #fff;
-        }
-
-        .notice-bar i.fa-star {
-            color: #ff4d4d;
-        }
-        
-        .notice-bar i.fa-bolt {
-            color: #ffcc00;
+            width: 100%;
+            max-width: 380px;
         }
 
         /* Links List */
@@ -133,6 +96,7 @@
             color: #fff;
             transition: transform 0.2s, background 0.2s;
             text-align: left;
+            cursor: pointer;
         }
 
         .link-card:hover {
@@ -145,13 +109,13 @@
         .link-binance { border-color: #f3ba2f; }
         .link-payoneer { border-color: #00a3a6; }
         .link-ads { border-color: #a855f7; }
-        .link-mods-p1 { border-color: #ef4444; } /* Page 1 Red Border */
-        .link-mods-p2 { border-color: #f97316; } /* Page 2 Orange / Flame Border */
+        .link-mods-p1 { border-color: #ef4444; }
+        .link-mods-p2 { border-color: #f97316; }
 
         /* Icons styling */
         .icon-wrapper {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -159,8 +123,10 @@
             font-size: 18px;
             margin-right: 14px;
             flex-shrink: 0;
+            font-weight: bold;
         }
 
+        /* Fallback icon backgrounds and text colors */
         .link-crypto .icon-wrapper { background: rgba(0, 176, 116, 0.15); color: #00b074; }
         .link-binance .icon-wrapper { background: rgba(243, 186, 47, 0.15); color: #f3ba2f; }
         .link-payoneer .icon-wrapper { background: rgba(0, 163, 166, 0.15); color: #00a3a6; }
@@ -199,6 +165,7 @@
         .arrow-right {
             color: #666;
             font-size: 14px;
+            margin-left: auto;
         }
 
         /* Footer Section */
@@ -211,12 +178,13 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 24px;
+            margin-top: 10px;
         }
 
         .social-icons a {
             color: #b3b3b3;
-            font-size: 18px;
+            font-size: 20px;
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -229,17 +197,10 @@
 <body>
 
     <div class="container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <div>
-                <div class="logo-text">GTA<br><span>Modding</span><br>Community</div>
-                <i class="fa-solid fa-gamepad logo-icon"></i>
-            </div>
-        </div>
-
-        <!-- Header -->
+        <!-- Header Title -->
         <h1>GTA Modding Community</h1>
         <div class="tags">Mods • Tools • Tutorials • Community</div>
+        
         <div class="description">
             We create and share high quality GTA Mods & tools for free.<br>
             Your support keeps this community alive! ❤️
@@ -247,25 +208,25 @@
 
         <!-- Notice Bar -->
         <div class="notice-bar">
-            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star" style="color: #ff4d4d;"></i>
             <span>Most users support via Binance (Fast & Easy)</span>
-            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt" style="color: #ffcc00;"></i>
         </div>
 
         <!-- Links List -->
         <div class="links-list">
-            <!-- Crypto Support -->
-            <a href="#" class="link-card link-crypto">
-                <div class="icon-wrapper"><i class="fa-solid fa-t"></i></div>
+            <!-- Crypto Support (Click to Copy Address) -->
+            <div onclick="copyCryptoAddress()" class="link-card link-crypto">
+                <div class="icon-wrapper"><i class="fa-solid fa-dollar-sign"></i></div>
                 <div class="link-content">
                     <div class="link-title">Support via Crypto (TRC20) <span class="badge">Top</span></div>
-                    <div class="link-desc">USDT TRC20 Accepted</div>
+                    <div class="link-desc" id="crypto-status">Click to copy TRC20 Address</div>
                 </div>
-                <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
-            </a>
+                <div class="arrow-right"><i class="fa-solid fa-copy"></i></div>
+            </div>
 
             <!-- Binance Pay -->
-            <a href="#" class="link-card link-binance">
+            <a href="https://s.binance.com/emgxQYEd" target="_blank" class="link-card link-binance">
                 <div class="icon-wrapper"><i class="fa-solid fa-coins"></i></div>
                 <div class="link-content">
                     <div class="link-title">Donate via Binance Pay <i class="fa-solid fa-bolt" style="color: #f3ba2f; font-size: 12px;"></i></div>
@@ -275,17 +236,17 @@
             </a>
 
             <!-- Payoneer Support -->
-            <a href="#" class="link-card link-payoneer">
+            <a href="https://link.payoneer.com/Token?t=5F42337B3E8F40C39BD4F02E08EB1BDB&src=mobile" target="_blank" class="link-card link-payoneer">
                 <div class="icon-wrapper"><i class="fa-solid fa-credit-card"></i></div>
                 <div class="link-content">
                     <div class="link-title">Payoneer Support 🌐</div>
-                    <div class="link-desc">Send payment via Payoneer Email or ID</div>
+                    <div class="link-desc">Send payment via Payoneer Official Link</div>
                 </div>
                 <div class="arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
             </a>
 
             <!-- Free Support -->
-            <a href="#" class="link-card link-ads">
+            <a href="https://sfl.gl/ygPldz4" target="_blank" class="link-card link-ads">
                 <div class="icon-wrapper"><i class="fa-solid fa-eye"></i></div>
                 <div class="link-content">
                     <div class="link-title">Free Support (Watch Ads) 🎉</div>
@@ -318,12 +279,31 @@
         <!-- Footer -->
         <div class="footer-text">Thanks for being part of this community! 🙏</div>
         <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://youtube.com/@gtamoddingcommuniity?si=6gCmn2HaJsiymXBR" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/GtaModdingCommunnity" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://wa.me/923102656635" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:aamirh258@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
+
+    <!-- Crypto Address Copy JavaScript -->
+    <script>
+        function copyCryptoAddress() {
+            const address = "TDLShVWmJzgyR26KiYD2ZaCWnuh7hCoHdV";
+            navigator.clipboard.writeText(address).then(() => {
+                const statusText = document.getElementById("crypto-status");
+                statusText.innerText = "Address Copied! ✅";
+                statusText.style.color = "#00b074";
+                
+                setTimeout(() => {
+                    statusText.innerText = "USDT TRC20 Address Copied";
+                    statusText.style.color = "#8c8c8c";
+                }, 3000);
+            }).catch(err => {
+                alert("Address: " + address);
+            });
+        }
+    </script>
 
 </body>
 </html>
